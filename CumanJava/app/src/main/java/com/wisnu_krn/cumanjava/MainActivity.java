@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitPesanan(View view){
         int banyaknyaKopi = 3;
+        int harga = 25000;
 
         display(banyaknyaKopi);
-        displayHarga(banyaknyaKopi * 25000);
+        displayHarga(banyaknyaKopi * harga);
     }
 
     private void displayHarga(int harga){

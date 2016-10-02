@@ -22,24 +22,41 @@
             android:textSize="24sp"
             android:gravity="center_horizontal"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:id="@+id/banyak"
-            android:text="0"
-            android:textSize="50sp"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="normal|bold"
-            android:textAllCaps="true"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:id="@+id/tambah"
+                android:layout_margin="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/banyak"
+                android:text="0"
+                android:textSize="50sp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="normal|bold"
+                android:textAllCaps="true"/>
+            <Button
+                android:layout_margin="8dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:id="@+id/kurang"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HARGA"
             android:textSize="24sp"
-            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             />
         <!--<LinearLayout-->
@@ -59,7 +76,6 @@
                 <!--android:text="0"-->
                 <!--android:textSize="50sp"-->
                 <!--android:id="@+id/harga"/>-->
-
         <!--</LinearLayout>-->
 
         <TextView
@@ -71,7 +87,6 @@
             android:textSize="50sp"
             android:id="@+id/harga"/>
 
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,9 +94,8 @@
             android:id="@+id/button"
             android:elevation="1dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
             android:onClick="submitPesanan"/>
-
     </LinearLayout>
 
 </RelativeLayout>
