@@ -12,7 +12,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.wisnu_krn.cumanjava.MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,14 +21,14 @@
         <TextView
             style="@style/HeaderTextStyle"
             android:textColor="#000000"
-            android:text="TOPPINGS" />
+            android:text="TOPPING" />
 
         <CheckBox
             android:id="@+id/cokelat1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Cokelat 1"
+            android:text="Cokelat"
             android:textSize="16sp" />
 
         <CheckBox
@@ -37,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Cokelat 2"
+            android:text="Buah"
             android:textSize="16sp" />
 
         <CheckBox
@@ -45,118 +44,121 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Cokelat 3"
+            android:text="Campur"
             android:textSize="16sp" />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/konten"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_below="@id/checkbox1"
-        android:layout_marginTop="8dp"
-        android:gravity="bottom">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="JUMLAH"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:gravity="center_horizontal"/>
-
+        android:layout_marginTop="8dp">
         <LinearLayout
+            android:id="@+id/konten"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="#000000"
-                android:textColor="#ffffff"
-                android:text="-"
-                android:textSize="28sp"
-                android:id="@+id/tambah"
-                android:layout_margin="8dp"
-                android:onClick="decrement"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:id="@+id/banyak"
+                android:text="JUMLAH"
+                android:textSize="24sp"
                 android:textColor="#000000"
-                android:text="0"
-                android:textSize="50sp"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"/>
+                android:gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#000000"
+                    android:textColor="#ffffff"
+                    android:text="-"
+                    android:textSize="28sp"
+                    android:id="@+id/tambah"
+                    android:layout_margin="8dp"
+                    android:onClick="decrement"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:id="@+id/banyak"
+                    android:textColor="#000000"
+                    android:text="0"
+                    android:textSize="50sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_margin="8dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#000000"
+                    android:textColor="#ffffff"
+                    android:text="+"
+                    android:textSize="28sp"
+                    android:id="@+id/kurang"
+                    android:onClick="increment"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="HARGA"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"/>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_horizontal">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Rp. "-->
+                    <!--android:textSize="50sp"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="0"-->
+                    <!--android:textSize="50sp"-->
+                    <!--android:id="@+id/harga"/>-->
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Rp. 0"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="#000000"
+                android:id="@+id/harga"/>
 
             <Button
-                android:layout_margin="8dp"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sentuh saya mas"
+                android:textAllCaps="false"
+                android:id="@+id/button"
+                android:elevation="1dp"
+                android:padding="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:onClick="submitPesanan"
                 android:background="#000000"
-                android:textColor="#ffffff"
-                android:text="+"
-                android:textSize="28sp"
-                android:id="@+id/kurang"
-                android:onClick="increment"/>
-
+                android:textColor="#ffffff"/>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="HARGA"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:gravity="center_horizontal"/>
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:gravity="center_horizontal">-->
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Rp. "-->
-                <!--android:textSize="50sp"-->
-                <!--/>-->
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="0"-->
-                <!--android:textSize="50sp"-->
-                <!--android:id="@+id/harga"/>-->
-        <!--</LinearLayout>-->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Rp. 0"
-            android:textStyle="bold"
-            android:textSize="50sp"
-            android:textColor="#000000"
-            android:id="@+id/harga"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ORDER"
-            android:id="@+id/button"
-            android:elevation="1dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:onClick="submitPesanan"
-            android:background="#000000"
-            android:textColor="#ffffff"/>
-
-    </LinearLayout>
-
+    </ScrollView>
 </RelativeLayout>
