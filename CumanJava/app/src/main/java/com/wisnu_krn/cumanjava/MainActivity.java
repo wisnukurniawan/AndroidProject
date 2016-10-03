@@ -3,6 +3,7 @@ package com.wisnu_krn.cumanjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -11,13 +12,38 @@ import java.text.DecimalFormatSymbols;
 
 public class MainActivity extends AppCompatActivity {
     private int banyaknyaKopi = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button mButtonTambah = (Button) findViewById(R.id.tambah);
+        mButtonTambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                increment();
+            }
+        });
+
+        Button mButtonKurang = (Button) findViewById(R.id.kurang);
+        mButtonKurang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                decrement();
+            }
+        });
+
+        Button mButtonSentuh = (Button) findViewById(R.id.sentuh);
+        mButtonSentuh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                submitPesanan();
+            }
+        });
     }
 
-    public void submitPesanan(View view){
+    public void submitPesanan(){
         CheckBox cokelat1 = (CheckBox) findViewById(R.id.cokelat1);
         boolean hasCokelat1 = cokelat1.isChecked();
 
@@ -41,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         return banyaknyaKopi * hargaBiasa;
     }
 
-    public void increment(View view){
+    public void increment(){
         if (banyaknyaKopi == 100) {
             return;
         }
@@ -49,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         display(banyaknyaKopi);
     }
 
-    public void decrement(View view){
+    public void decrement(){
         if (banyaknyaKopi == 0) {
             return;
         }
