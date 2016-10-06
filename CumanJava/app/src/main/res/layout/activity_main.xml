@@ -156,7 +156,7 @@
                 android:textAllCaps="false"
                 android:id="@+id/sentuh"
                 android:elevation="1dp"
-                android:padding="4dp"
+                android:padding="8dp"
                 android:layout_marginTop="20dp"/>
         </LinearLayout>
     </ScrollView>
