@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void submitPesanan(){
+    public void submitPesanan() {
         CheckBox cokelat1 = (CheckBox) findViewById(R.id.cokelat1);
         boolean hasCokelat1 = cokelat1.isChecked();
 
@@ -61,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
     private int hitungHarga(boolean hasCokelat1, boolean hasCokelat2, boolean hasCokelat3) {
         int hargaBiasa = 10000;
-        if(hasCokelat1) hargaBiasa = hargaBiasa + 2000;
-        if(hasCokelat2) hargaBiasa = hargaBiasa + 4000;
-        if(hasCokelat3) hargaBiasa = hargaBiasa + 6000;
+        if (hasCokelat1) hargaBiasa = hargaBiasa + 2000;
+        if (hasCokelat2) hargaBiasa = hargaBiasa + 4000;
+        if (hasCokelat3) hargaBiasa = hargaBiasa + 6000;
 
         return banyaknyaKopi * hargaBiasa;
     }
 
-    public void increment(){
+    public void increment() {
         if (banyaknyaKopi == 100) {
             return;
         }
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         display(banyaknyaKopi);
     }
 
-    public void decrement(){
+    public void decrement() {
         if (banyaknyaKopi == 0) {
             return;
         }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         display(banyaknyaKopi);
     }
 
-    private void displayHarga(int harga){
+    private void displayHarga(int harga) {
         DecimalFormat kursIndonesia = (DecimalFormat) DecimalFormat.getCurrencyInstance();
         DecimalFormatSymbols formatRp = new DecimalFormatSymbols();
 
