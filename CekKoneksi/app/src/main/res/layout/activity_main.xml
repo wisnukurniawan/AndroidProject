@@ -15,14 +15,32 @@
         android:id="@+id/text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Hello World! 1"
         android:textColor="@color/colorAccent"
         android:textSize="50sp"/>
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! 2"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        android:layout_below="@id/text_1"/>
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! 3"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        android:layout_below="@id/text_2"/>
 
     <Button
         android:id="@+id/button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="sentuh saya"
-        android:layout_below="@id/text_1"/>
+        android:layout_below="@id/text_3"/>
 </RelativeLayout>
