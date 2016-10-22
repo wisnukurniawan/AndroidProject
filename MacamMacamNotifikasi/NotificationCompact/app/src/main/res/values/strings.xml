@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NotificationCompact</string>
+    <string name="notif_small">Small icon</string>
+    <string name="notif_larger">Large icon</string>
+    <string name="notif_actions">with aksi</string>
+    <string name="notif_sound">with sound</string>
+    <string name="notif_big_picture">style big picture</string>
+    <string name="notif_big_text">style big text</string>
+    <string name="notif_inbox">style inboxstyle</string>
+    <string name="notif_media">style mediastyle</string>
+</resources>
