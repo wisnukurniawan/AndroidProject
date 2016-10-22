@@ -1,4 +1,5 @@
 # AndroidProject
 Belajar Android [EXAMPLE]
 
-Contoh-contoh program Android yang saya buat supaya lebih paham
+Projek ini berisi contoh-contoh project kecil android
+
