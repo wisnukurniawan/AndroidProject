@@ -20,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         komentarField = (EditText) findViewById(R.id.komentar);
+        loadString();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        String komentar = komentarField.getText().toString();
+        saveString(komentar);
     }
 
     public void saveString(String value) {
@@ -34,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         if (savedValue.equals(DEFAULT_STRING)){
             //Toast.makeText(getApplicationContext(), "Nilai KOSONG", Toast.LENGTH_LONG).show();
         }else {
-            //displayPengumuman(savedValue);
-            //setCursorInEnd();
+            komentarField.setText(savedValue);
+            komentarField.setSelection(komentarField.getText().length());
         }
     }
 }
