@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements FingerPrintAuthCa
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (charSequence.toString().equals("1234")){
-                    Toast.makeText(MainActivity.this, "Autentifikasi Sukses", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, ActivitySuccess.class));
                 }
             }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements FingerPrintAuthCa
         super.onResume();
         buttonGoToSetting.setVisibility(View.GONE);
 
-        textViewAuthMessage.setText("Scan your finger");
+        textViewAuthMessage.setText("Scan jarimu");
         mFingerPrintAuthHelper.startAuth();
     }
 
@@ -88,19 +88,19 @@ public class MainActivity extends AppCompatActivity implements FingerPrintAuthCa
 
     @Override
     public void onNoFingerPrintHardwareFound() {
-        textViewAuthMessage.setText("Your device does not have finger print scanner. Please type 1234 to authenticate.");
+        textViewAuthMessage.setText("Perangkatmu tidak mendukun fingerprint. Tolong masukan angka 1234 untuk autentifikasi.");
         mSwitcher.showNext();
     }
 
     @Override
     public void onNoFingerPrintRegistered() {
-        textViewAuthMessage.setText("There are no finger prints registered on this device. Please register your finger from settings.");
+        textViewAuthMessage.setText("Tidak ada fingerprint ter register di device ini. Tolong register fingerprint dari pengaturan.");
         buttonGoToSetting.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onBelowMarshmallow() {
-        textViewAuthMessage.setText("You are running older version of android that does not support finger print authentication. Please type 1234 to authenticate.");
+        textViewAuthMessage.setText("Device ini tidak mendukung fingerprint. Tolong masukan angka 1234 untuk autentifikasi.");
         mSwitcher.showNext();
     }
 
@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity implements FingerPrintAuthCa
     public void onAuthFailed(int errorCode, String errorMessage) {
         switch (errorCode){
             case AuthErrorCodes.CANNOT_RECOGNIZE_ERROR:
-                textViewAuthMessage.setText("Cannot recognize your finger print. Please try again.");
+                textViewAuthMessage.setText("Tidak dapat men recognize fingerprint. Coba lagi.");
                 break;
             case AuthErrorCodes.NON_RECOVERABLE_ERROR:
-                textViewAuthMessage.setText("Cannot initialize finger print authentication. Please type 1234 to authenticate.");
+                textViewAuthMessage.setText("Tidak dapat meninit fingerprint autentifikasi. Coba masukan angka 1234 untuk autentifikasi.");
                 mSwitcher.showNext();
                 break;
             case AuthErrorCodes.RECOVERABLE_ERROR:
