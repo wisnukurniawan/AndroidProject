@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         komentarField = (EditText) findViewById(R.id.komentar);
-        loadString();
+        //loadString();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         String komentar = komentarField.getText().toString();
-        saveString(komentar);
+        //saveString(komentar);
     }
 
     public void saveString(String value) {
