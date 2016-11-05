@@ -10,9 +10,10 @@ import android.widget.EditText;
 
 import com.wisnu_krn.codelabsfirebase.R;
 
-public class AddActivity extends AppCompatActivity {
+public class AddActivity extends AppCompatActivity implements AddView {
     private EditText etInputLink;
     private Button btnSave;
+    private AddPresenter mAddPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class AddActivity extends AppCompatActivity {
 
         etInputLink = (EditText) findViewById(R.id.addLink);
         btnSave = (Button) findViewById(R.id.btnAddSave);
+
+        //instance presenter
+        mAddPresenter = new AddPresenter(this);
 
         Intent intent = getIntent();
         String aksi = intent.getAction();
@@ -35,7 +39,7 @@ public class AddActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                mAddPresenter.saveLink(etInputLink.getText().toString());
             }
         });
     }

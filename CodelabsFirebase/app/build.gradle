@@ -29,6 +29,10 @@ dependencies {
 
     compile 'com.google.firebase:firebase-crash:9.8.0'
     testCompile 'junit:junit:4.12'
+
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }
 
 
