@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mencicipi Animasi</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>
