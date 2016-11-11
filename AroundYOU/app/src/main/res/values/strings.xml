@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Around YOU</string>
+    <string name="rationale_permissions">This app needs to access some permissions to run the features.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_api_key">AIzaSyCnIYVuCBFszx4HBNvhXzbIImkJaxmkHpA</string>
+</resources>
