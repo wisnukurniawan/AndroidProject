@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Dynamic UI</string>
+    <string name="dynamicUITitle">Creating Dynamic UI with Android Fragments</string>
+    <string name="android4NewTitle">Android 4 new feature for Application Development</string>
+    <string name="androidSysDevTitle">Instant android systems Development How to</string>
+    <string name="androidEngineTitle">And Engine for Android Game Development CookBook</string>
+    <string name="androidDbProgTitle">Android database Programming</string>
+
+    <string name="dynamicUIDescription">
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+        Creating Dynamic UI with Android Fragments
+    </string>
+    <string name="android4NewDescription">
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+        Android 4 new feature for Application Development
+    </string>
+    <string name="androidSysDevDescription">
+        Instant android systems Development How to
+        Instant android systems Development How to
+        Instant android systems Development How to
+        Instant android systems Development How to
+        Instant android systems Development How to
+        Instant android systems Development How to
+        Instant android systems Development How to
+    </string>
+    <string name="androidEngineDescription">
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+         And Engine for Android Game Development CookBook
+    </string>
+    <string name="androidDbProgDescription">
+        Android database Programming
+        Android database Programming
+        Android database Programming
+        Android database Programming
+        Android database Programming
+        Android database Programming
+        Android database Programming
+    </string>
+
+</resources>
