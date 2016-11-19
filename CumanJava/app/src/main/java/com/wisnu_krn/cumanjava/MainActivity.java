@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void display(int banyak) {
         TextView jumlahTV = (TextView) findViewById(R.id.banyak);
-        jumlahTV.setText("" + banyak);
+        jumlahTV.setText(String.valueOf(banyak));
+        //butterknife
     }
 }

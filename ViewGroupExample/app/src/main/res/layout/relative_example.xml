@@ -38,4 +38,20 @@
             android:layout_alignTop="@+id/textView3"
             android:layout_alignStart="@+id/textView2"
             />
+
+    <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="testing"
+            android:layout_below="@id/textView"/>
+
+    <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/textView_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="testing 2"
+            android:layout_below="@id/textView"
+            android:layout_toEndOf="@id/textView_1"/>
 </RelativeLayout>

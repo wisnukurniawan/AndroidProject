@@ -5,20 +5,20 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:context="com.wisnu_krn.dynamicui.MainActivity">
     <!-- List of Book Titles -->
     <fragment
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:name="com.wisnu_krn.dynamicui.BookListFragment"
             android:id="@+id/fragmentTitles"/>
 
     <!-- Description of selected book -->
     <fragment
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:name="com.wisnu_krn.dynamicui.BookDescFragment"
             android:id="@+id/fragmentDescription"/>
