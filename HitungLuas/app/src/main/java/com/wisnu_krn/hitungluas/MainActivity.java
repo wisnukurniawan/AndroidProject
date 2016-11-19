@@ -37,20 +37,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_hitung:
                 String panjang = edittext_panjang.getText().toString().trim();
                 String lebar = edittext_lebar.getText().toString().trim();
+                try {
+                    if (TextUtils.isEmpty(panjang) || TextUtils.isEmpty(lebar)) {
+                        String text = "exception error! input ada yang kosong";
+                        int duration = Toast.LENGTH_LONG;
 
-                if (TextUtils.isEmpty(panjang) || TextUtils.isEmpty(lebar)) {
-                    String text = "exception error! check your input";
+                        Toast toast = Toast.makeText(MainActivity.this, text, duration);
+                        toast.show();
+                    } else {
+                        double p = Double.parseDouble(panjang);
+                        double l = Double.parseDouble(lebar);
+
+                        double luas = p * l;
+
+                        textview_hasil.setText("Luas : " + luas);
+                    }
+                } catch (Exception e) {
+                    CharSequence text = "exception error! check your input";
                     int duration = Toast.LENGTH_LONG;
 
                     Toast toast = Toast.makeText(MainActivity.this, text, duration);
                     toast.show();
-                } else {
-                    double p = Double.parseDouble(panjang);
-                    double l = Double.parseDouble(lebar);
-
-                    double luas = p * l;
-
-                    textview_hasil.setText("Luas : " + luas);
+                    e.printStackTrace();
                 }
                 break;
         }

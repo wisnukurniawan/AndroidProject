@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">View Group Example</string>
+    <string name="deskripsi">it is not appropriate to cite this exception to justify omitting relevant information that a typical reader might need to know. For example, for a method named getCanonicalName, don't omit its documentation (with the rationale that it would say only /** Returns the canonical name. */) if a typical reader may have no idea what the term "canonical name" means!</string>
+</resources>
