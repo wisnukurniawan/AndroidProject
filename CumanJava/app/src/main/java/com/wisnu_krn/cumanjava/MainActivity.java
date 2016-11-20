@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cokelat3 = (CheckBox) findViewById(R.id.cokelat3);
         boolean hasCokelat = cokelat3.isChecked();
 
+        String namaPembeli;
         int harga = hitungHarga(hasCokelat1, hasCokelat2, hasCokelat);
-        displayHarga(harga);
-
+        //displayHarga(harga);
     }
 
     private int hitungHarga(boolean hasCokelat1, boolean hasCokelat2, boolean hasCokelat3) {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
         kursIndonesia.setDecimalFormatSymbols(formatRp); //menerapkan nilai format simbol ke kurs Indonesia
 
-        TextView hargaTV = (TextView) findViewById(R.id.harga); //menyimpan view harga di hargaTV
+        TextView hargaTV = (TextView) findViewById(harga); //menyimpan view harga di hargaTV
         hargaTV.setText(kursIndonesia.format(harga)); //ngeset view sesuai harga dengan format yang udah di buat
     }
 
