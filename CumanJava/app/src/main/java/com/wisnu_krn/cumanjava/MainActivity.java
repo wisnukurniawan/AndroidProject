@@ -1,10 +1,12 @@
 package com.wisnu_krn.cumanjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -54,9 +56,17 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cokelat3 = (CheckBox) findViewById(R.id.cokelat3);
         boolean hasCokelat = cokelat3.isChecked();
 
-        String namaPembeli;
         int harga = hitungHarga(hasCokelat1, hasCokelat2, hasCokelat);
-        //displayHarga(harga);
+        EditText namaLo = (EditText) findViewById(R.id.editText_namaPembeli);
+
+        String priceMessage = "Name" + namaLo.getText().toString()
+                + "\n1. Cokelat : " + hasCokelat1
+                + "\n2. Buah : " + hasCokelat2
+                + "\n3. Campur : " + hasCokelat
+                + "\nHarga : " + harga;
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("pesan", priceMessage);
+        startActivity(intent);
     }
 
     private int hitungHarga(boolean hasCokelat1, boolean hasCokelat2, boolean hasCokelat3) {
@@ -104,4 +114,5 @@ public class MainActivity extends AppCompatActivity {
         jumlahTV.setText(String.valueOf(banyak));
         //butterknife
     }
+
 }

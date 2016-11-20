@@ -13,64 +13,51 @@
         tools:context="com.wisnu_krn.cumanjava.MainActivity">
 
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
+            android:id="@+id/checkbox1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checkbox1">
+            android:orientation="vertical"
+            >
 
-
-        <LinearLayout
+        <EditText
+                android:id="@+id/editText_namaPembeli"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:hint="Nama looo"
+                android:inputType="textCapWords"
+                android:layout_marginBottom="8dp"/>
 
-            <EditText
-                    android:id="@+id/editText_namaPembeli"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nama looo"
-                    android:inputType="textCapWords"
-                    android:layout_marginBottom="8dp"/>
+        <android.support.v7.widget.AppCompatTextView
+                style="@style/HeaderTextStyle"
+                android:textColor="#000000"
+                android:text="TOPPING"
+                android:paddingLeft="8dp"/>
 
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray">
+        <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/cokelat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Cokelat"
+                android:textSize="16sp"/>
 
-            </View>
+        <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/cokelat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Buah"
+                android:textSize="16sp"/>
 
-            <android.support.v7.widget.AppCompatTextView
-                    style="@style/HeaderTextStyle"
-                    android:textColor="#000000"
-                    android:text="TOPPING"
-                    android:paddingLeft="8dp"/>
-
-            <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/cokelat1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="24dp"
-                    android:text="Cokelat"
-                    android:textSize="16sp"/>
-
-            <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/cokelat2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="24dp"
-                    android:text="Buah"
-                    android:textSize="16sp"/>
-
-            <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/cokelat3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="24dp"
-                    android:text="Campur"
-                    android:textSize="16sp"/>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/cokelat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:text="Campur"
+                android:textSize="16sp"/>
+    </LinearLayout>
 
     <ScrollView
             android:layout_width="match_parent"

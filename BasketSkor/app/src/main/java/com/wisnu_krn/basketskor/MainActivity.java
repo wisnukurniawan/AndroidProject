@@ -1,5 +1,6 @@
 package com.wisnu_krn.basketskor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button forBTwoPoint = (Button) findViewById(R.id.b_poin_2);
         Button forBThreePoint = (Button) findViewById(R.id.b_poin_3);
         Button reset = (Button) findViewById(R.id.reset);
+        Button finish = (Button) findViewById(R.id.finish);
 
         forATwoPoint.setOnClickListener(this);
         forAOnePoint.setOnClickListener(this);
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         forBOnePoint.setOnClickListener(this);
         forBThreePoint.setOnClickListener(this);
         reset.setOnClickListener(this);
+        finish.setOnClickListener(this);
 
     }
 
@@ -50,27 +53,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.a_poin_1 :
+            case R.id.a_poin_1:
                 addOneForTeamA();
                 break;
-            case R.id.a_poin_2 :
+            case R.id.a_poin_2:
                 addTwoForTeamA();
                 break;
-            case R.id.a_poin_3 :
+            case R.id.a_poin_3:
                 addThreeForTeamA();
                 break;
-            case R.id.b_poin_1 :
+            case R.id.b_poin_1:
                 addOneForTeamB();
                 break;
-            case R.id.b_poin_2 :
+            case R.id.b_poin_2:
                 addTwoForTeamB();
                 break;
-            case R.id.b_poin_3 :
+            case R.id.b_poin_3:
                 addThreeForTeamB();
                 break;
-            case R.id.reset :
+            case R.id.reset:
                 resetSkor();
+                break;
+            case R.id.finish:
+                move();
+                break;
         }
+    }
+
+    private void move() {
+        String hasil;
+        String winner;
+        if (scoreTeamA > scoreTeamB) {
+            hasil = "Cavaliers";
+            winner = "a";
+        } else if (scoreTeamA < scoreTeamB) {
+            hasil = "Miami Heat";
+            winner = "b";
+        } else {
+            winner = "";
+            hasil = "Imbang -_-";
+        }
+
+        hasil = hasil
+                + "\nDengan Skor\n" + scoreTeamA + " melawan " + scoreTeamB;
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("hasil", hasil);
+        intent.putExtra("winner", winner);
+        startActivity(intent);
     }
 
     public void addOneForTeamA() {
@@ -109,5 +139,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
-
 }
