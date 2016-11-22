@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(intent2, 0);
                 break;
             case R.id.btn_activity_dial:
-                Intent intent3 = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:082121212093"));
+                Intent intent3 = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:082215554141"));
                 startActivity(intent3);
                 break;
         }
