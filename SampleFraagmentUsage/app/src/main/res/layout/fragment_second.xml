@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".SecondFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:id="@+id/txt_second_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ini fragment 2"
+            android:layout_marginBottom="8dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+    <Button
+            android:id="@+id/btn_second_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ke Fragment 3"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txt_second_fragment"/>
+</RelativeLayout>
