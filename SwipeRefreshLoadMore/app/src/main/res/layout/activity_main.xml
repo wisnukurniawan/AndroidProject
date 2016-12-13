@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_main">
+
+    <com.wisnu_krn.swiperefreshloadmore.LoadMoreListView
+            android:id="@+id/lv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent">
+    </com.wisnu_krn.swiperefreshloadmore.LoadMoreListView>
+</android.support.v4.widget.SwipeRefreshLayout>

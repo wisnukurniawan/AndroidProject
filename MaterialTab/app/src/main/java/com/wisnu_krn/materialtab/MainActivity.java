@@ -39,6 +39,5 @@ public class MainActivity extends AppCompatActivity {
 
         //konfigurasi Gravity Fill untuk Tab berada di posisi yang proposional
         tabs.setTabGravity(TabLayout.GRAVITY_FILL);
-
     }
 }
