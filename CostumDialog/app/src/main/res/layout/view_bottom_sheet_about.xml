@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorPrimary"
+              android:paddingLeft="@dimen/medium_space_between_views"
+              android:paddingTop="@dimen/medium_space_between_views">
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="'NamaAplikasi' merupakan aplikasi yang berguna untuk..."/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library &amp; resources"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library 1"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library 2"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Library 3"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/minimum_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kris Jon"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maikel Jakson"/>
+
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    <TextView
+            android:layout_marginBottom="@dimen/medium_space_between_views"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cp : email@dicoding.com"/>
+
+
+
+</LinearLayout>
